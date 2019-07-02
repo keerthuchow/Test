@@ -1,13 +1,13 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>@groupId@</groupId>
-  <artifactId>@artifactId@</artifactId>
-  <version>@version@</version>
+  <groupId>test</groupId>
+  <artifactId>test-01</artifactId>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
-  <name>@ant.project.name@</name>
-  <description>@description@</description>
-  <url>@project.url@</url>
+  <name>keerthu_test</name>
+  <description>this is a test</description>
+  <url>na</url>
 
   <licenses>
     <license>
