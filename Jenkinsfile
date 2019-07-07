@@ -11,4 +11,10 @@ node{
                 sh "mvn clean package"
         }
     }
+    stage(code coverage)
+    
+    {
+        jacoco deltaBranchCoverage: '40', deltaClassCoverage: '50', deltaComplexityCoverage: '50', deltaInstructionCoverage: '50', deltaLineCoverage: '50', deltaMethodCoverage: '50', maximumBranchCoverage: '88', maximumClassCoverage: '80', maximumComplexityCoverage: '90', maximumInstructionCoverage: '90', maximumLineCoverage: '80', maximumMethodCoverage: '70', minimumBranchCoverage: '80', minimumClassCoverage: '75', minimumComplexityCoverage: '88', minimumInstructionCoverage: '75', minimumLineCoverage: '77', minimumMethodCoverage: '65'
+   
+   }
 }
