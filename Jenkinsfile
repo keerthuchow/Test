@@ -17,4 +17,14 @@ node{
         jacoco deltaBranchCoverage: '40', deltaClassCoverage: '50', deltaComplexityCoverage: '50', deltaInstructionCoverage: '50', deltaLineCoverage: '50', deltaMethodCoverage: '50', maximumBranchCoverage: '88', maximumClassCoverage: '80', maximumComplexityCoverage: '90', maximumInstructionCoverage: '90', maximumLineCoverage: '80', maximumMethodCoverage: '70', minimumBranchCoverage: '80', minimumClassCoverage: '75', minimumComplexityCoverage: '88', minimumInstructionCoverage: '75', minimumLineCoverage: '77', minimumMethodCoverage: '65'
    
    }
+
+   
+stage("Building SONAR ...") {
+sh './gradlew clean sonarqube'
 }
+ catch (e) {emailext attachLog: true, body: 'See attached log', subject: 'BUSINESS Build Failure', to: 'abc@gmail.com'
+step([$class: 'WsCleanup'])
+return
+    }
+ }
+
