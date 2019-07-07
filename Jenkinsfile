@@ -5,8 +5,10 @@ node{
     }
     stage ('build')
     {
-        sh 'mvn -B package'
-
-
+        def mvn_version = 'M3'
+        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
+        {
+                sh "mvn clean package"
+        }
     }
 }
